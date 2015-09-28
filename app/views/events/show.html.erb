@@ -1,0 +1,5 @@
+<h1><%= @event.restaurant.name %></h1>
+<%= render 'join_event' %>
+
+<p><%= @event.users.size %> foodees are coming on <%= @event.start.strftime("%b. %d at %l:%M%P") %></p>
+<%= render @event.users %>

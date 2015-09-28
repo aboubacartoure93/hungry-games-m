@@ -1,0 +1,6 @@
+<%= render 'shared/search' %>
+<ol>
+<% @restaurants.each do |restaurant| %>
+	<li><%= restaurant.name %> (<%= link_to 'create an event', restaurants_path(params: {restaurant: {name: restaurant.name, yelp_id: restaurant.id, address: restaurant.location.display_address.join(" ")}}), method: :post %>)</li>
+<% end %>
+</ol>

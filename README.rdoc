@@ -1,0 +1,9 @@
+* user ratings/comments
+* intro to concept/ welcome
+* block users
+* delete your profile
+* add preferences
+
+later features
+* restaurant profiles
+* group discounts

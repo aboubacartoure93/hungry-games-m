@@ -1,0 +1,4 @@
+<%= form_tag '/yelp', method: :get do %>
+	<%= select_tag(:cuisine, options_for_select(Restaurant::CUISINES.map.with_index { |c,i| [c, c] })) %>
+	<%= submit_tag "search" %>
+<% end %>

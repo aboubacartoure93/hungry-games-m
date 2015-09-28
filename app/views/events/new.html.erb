@@ -1,0 +1,11 @@
+<h1>Pick a time to have a meal at <%= @restaurant.name %></h1>
+<%= form_for [@restaurant, @event] do |f| %>
+	<p>
+		<%= f.label :start %>
+		<%= f.datetime_select :start %>
+	</p>
+	<p>
+		<%= f.submit "Book it!" %>
+	</p>
+
+<% end %>

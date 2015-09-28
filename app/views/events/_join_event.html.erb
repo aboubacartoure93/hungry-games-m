@@ -1,0 +1,7 @@
+<% if current_user %>
+	<% if @event.users.include? current_user %>
+		<p><%= link_to 'leave this event', leave_event_path(@event), method: :delete %></p>
+	<% else %>
+		<p><%= link_to 'join this event', join_event_path(@event), method: :post %></p>
+	<% end %>
+<% end %>
