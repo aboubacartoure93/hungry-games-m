@@ -14,6 +14,8 @@
  *= require_self
  */
 
+
+
 * {
 	box-sizing: border-box;
 }
@@ -22,6 +24,12 @@ body {
 	background-color: #EBF7FF;
 	font-family: arial;
 }
+body {
+    
+    background-image: url(/assets/a.jpg);
+    background-color: #cccccc;
+}
+ 
 
 header {
 	padding: .5em;
