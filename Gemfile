@@ -10,7 +10,7 @@ gem 'yelp', require: 'yelp'
 
 
 
-# gem 'rails', '4.2.4'
+gem 'rails', '4.2.4'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 # Use sqlite3 as the database for Active Record
