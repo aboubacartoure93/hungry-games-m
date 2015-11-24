@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924213007) do
+ActiveRecord::Schema.define(version: 20151124045906) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.integer  "user_id"
@@ -19,10 +22,11 @@ ActiveRecord::Schema.define(version: 20150924213007) do
     t.datetime "start"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "user_count"
   end
 
-  add_index "events", ["restaurant_id"], name: "index_events_on_restaurant_id"
-  add_index "events", ["user_id"], name: "index_events_on_user_id"
+  add_index "events", ["restaurant_id"], name: "index_events_on_restaurant_id", using: :btree
+  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
   create_table "events_users", id: false, force: :cascade do |t|
     t.integer "event_id", null: false
@@ -61,4 +65,6 @@ ActiveRecord::Schema.define(version: 20150924213007) do
     t.datetime "avatar_updated_at"
   end
 
+  add_foreign_key "events", "restaurants"
+  add_foreign_key "events", "users"
 end

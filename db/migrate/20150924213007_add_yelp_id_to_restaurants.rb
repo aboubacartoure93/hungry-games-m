@@ -3,3 +3,4 @@ class AddYelpIdToRestaurants < ActiveRecord::Migration
     add_column :restaurants, :yelp_id, :string
   end
 end
+ 
