@@ -21,4 +21,4 @@ production:
   pool: 5
   timeout: 5000
 
-  # has_many :document_doc_types
+ 
