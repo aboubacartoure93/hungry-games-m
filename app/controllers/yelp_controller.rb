@@ -1,12 +1,14 @@
 class YelpController < ApplicationController
 	
 	def index
-		client = Yelp::Client.new({ consumer_key: ENV['HUNGRY_GAMES_CONSUMER_KEY'],
-                            consumer_secret: ENV['HUNGRY_GAMES_CONSUMER_SECRET'],
-                            token: ENV['HUNGRY_GAMES_TOKEN'],
-                            token_secret: ENV['HUNGRY_GAMES_TOKEN_SECRET']
+		client = Yelp::Client.new({ consumer_key: ENV['PZPit6ccaHktVwsnR09GZg'],
+                            consumer_secret: ENV['8d49pTZ4ELUKqjsjBcJo8uV3vcY'],
+                            token: ENV['OvyPlsPtgCcU7vl-KiShXEfuqCILTdaz'],
+                            token_secret: ENV['svVFtQN-7thhoUGnqebWr3tcXMY']
                           })
-		
+
+		 
+		 
 		if params[:cuisine]
 			query = params[:cuisine]
 		else
